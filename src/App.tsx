@@ -2,8 +2,13 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="appContainer">
-      <h1>Expense Tracker</h1>
+    <div className="AppContainer">
+      <h1 className="HeaderContainer">Expense Tracker</h1>
+      <div>
+        <button>Create new tracker</button>
+      </div>
+      <hr />
+      <div>List of trackers </div>
     </div>
   );
 }
