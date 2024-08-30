@@ -1,15 +1,23 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
+import CreateTracker from "./pages/CreateTracker";
 
 function App() {
+
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "/create-tracker",
+      element: <CreateTracker />
+    }
+  ])
+
   return (
-    <div className="AppContainer">
-      <h1 className="HeaderContainer">Expense Tracker</h1>
-      <div>
-        <button>Create new tracker</button>
-      </div>
-      <hr />
-      <div>List of trackers </div>
-    </div>
+    <RouterProvider router={router} />
   );
 }
 
